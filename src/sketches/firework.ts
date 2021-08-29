@@ -40,7 +40,7 @@ export const firework = (p5: P5WrapperType) => {
 
     // 花火を打ち上げる間隔を調整
     if (p5.state && p5.dispatch) {
-      if (0 === p5.frameCount % 100 && p5.state.length > 0) {
+      if (0 === p5.frameCount % 20 && p5.state.length > 0) {
         const fw = p5.state[0];
         const speed = p5.random(10, 30);
         fireworks.push(
