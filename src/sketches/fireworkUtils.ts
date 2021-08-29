@@ -140,11 +140,11 @@ export const createFireWork = (
         // 花火の大きさ
         Array.from(Array(Math.round(properties.ball)).keys()).forEach(() => {
           // 爆発の角度
-          let r = p5.random(0, 360);
+          const r = p5.random(0, 360);
           // 花火の内側を作る（バラバラ）
-          let s = p5.random(0.1, 0.9);
-          let vx = Math.cos((r * Math.PI) / 180) * s * properties.large;
-          let vy = Math.sin((r * Math.PI) / 180) * s * properties.large;
+          const s = p5.random(0.1, 0.9);
+          const vx = Math.cos((r * Math.PI) / 180) * s * properties.large;
+          const vy = Math.sin((r * Math.PI) / 180) * s * properties.large;
           properties.explosions.push(
             createFireWork(
               p5,
@@ -159,10 +159,10 @@ export const createFireWork = (
             )
           );
           // 花火の輪郭を作る（丸くなるようにする）
-          let cr = p5.random(0, 360);
-          let cs = p5.random(0.9, 1);
-          let cvx = Math.cos((cr * Math.PI) / 180) * cs * properties.large;
-          let cvy = Math.sin((cr * Math.PI) / 180) * cs * properties.large;
+          const cr = p5.random(0, 360);
+          const cs = p5.random(0.9, 1);
+          const cvx = Math.cos((cr * Math.PI) / 180) * cs * properties.large;
+          const cvy = Math.sin((cr * Math.PI) / 180) * cs * properties.large;
           properties.explosions.push(
             createFireWork(
               p5,
