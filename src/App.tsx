@@ -1,24 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { FireButton } from './components/FireButton';
+import { Firework } from './components/Firework';
+import { FireworkProvider } from './hooks/FireWorkContext';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+      <FireworkProvider>
+        <Firework />
+        <FireButton />
+      </FireworkProvider>
     </div>
   );
 }
